@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
 
+
+const cuandollegueelpokemon = (pokemon) => {
+
+  console.log(pokemon.sprites.front_default)
+  const image = document.getElementById("pokemon-image")
+  image.src = pokemon.sprites.front_default
+}
+
+
+
+fetch("https://pokeapi.co/api/v2/pokemon/")
+  .then(response => response.json())
+  .then(cuandollegueelpokemon)
+
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+
     </div>
   );
 }
